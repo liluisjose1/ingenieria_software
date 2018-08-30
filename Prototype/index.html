@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Singleton</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="sweet-alert2/sweetalert2.min.css">
+    <link rel="shortcut icon" href="img/Minerva_2017.png">
+</head>
+<body>
+    <div class="container" >
+        <br>
+        <div class="content">
+                <div class="jumbotron">
+                        <h1 class="display-4 text-center ">Prototype Pattern!</h1>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <center><img src="img/Minerva_2017.png" width="20%" alt="img-fluid"></center>
+                                <h2 class="text-center" >Ing. de Software</h2>
+                                <h2 class="text-center" >Luis Iraheta IM15005</h2>
+                                <p class="lead text-justify">
+                                    The Prototype Pattern creates new objects, but rather than creating non-initialized objects it returns objects that are initialized with values it copied from a prototype - or sample - object. The Prototype pattern is also referred to as the Properties pattern.
+                                    An example of where the Prototype pattern is useful is the initialization of business objects with values that match the default values in the database. The prototype object holds the default values that are copied over into a newly created business object.
+                                    Classical languages rarely use the Prototype pattern, but JavaScript being a prototypal language uses this pattern in the construction of new objects and their prototypes..</p>
+                            </div>
+                            <!-- <div class="col-md-6">
+                                <img src="img/javascript-prototype.jpg" class="img-fluid">
+                            </div> -->
+                        </div>
+                        
+                        <hr class="my-4">
+                        <p class="lead">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label for="control-label">First Name</label>
+                                    <input type="text" class="form-control" id="fname" >                                    
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="control-label">Last Name</label>
+                                    <input type="text" class="form-control" id="lname" >                                    
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="control-label">Status</label>
+                                    <select name="" class="form-control" id="status">
+                                        <option value="Active">Active</option>
+                                        <option value="Pending">Pending</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <br>
+                            <center><button class="btn btn-primary"  onclick="run(); return false " >Probe pattern! </button></center>
+                        </p>
+                </div>
+        </div>
+    </div>
+</body>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="sweet-alert2/sweetalert2.min.js"></script>
+<script src="sweet-alert2/sweetalert2.common.js"></script>
+<script src="Prototype.js"></script>
+<!--  -->
+</html>
