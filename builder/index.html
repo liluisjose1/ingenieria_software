@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Builder</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="sweet-alert2/sweetalert2.min.css">
+    <link rel="shortcut icon" href="img/Minerva_2017.png">
+</head>
+<body>
+    <div class="container">
+        <br>
+        <div class="content">
+            <div class="jumbotron">
+                <h1 class="display-4 text-center ">Builder Pattern!</h1>
+                <hr class="my-4">
+                <div class="row">
+                    <div class="col-md-4">
+                        <button class="btn btn-primary" onclick="runIphone(); return false ">Iphone X</button>
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn btn-primary" onclick="runSamsung(); return false ">Galaxy S9</button>
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn btn-primary" onclick="run(); return false ">Chinito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <h1>Resultado</h1>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="alert alert-dark" role="alert">
+                        <center>
+                            <h2>Información del Celular <span id="anio"></span> </h2>
+                        </center>
+                        <div id="resultado"></div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div id="resultado_img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="sweet-alert2/sweetalert2.min.js"></script>
+<script src="sweet-alert2/sweetalert2.common.js"></script>
+<script src="builder.js"></script>
+
+<script type="text/javascript"> 
+    var anio = new Date();
+    document.getElementById("anio").innerHTML = anio.getFullYear();
+</script>
+
+</html>

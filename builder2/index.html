@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Luis Iraheta">
+  <meta name="description" content="builder pattern test">
+
+  <title>Builder Pattern IM15005</title>
+
+  <!-- Icon Page -->
+  <link rel="shortcut icon" href="./vendor/img/Minerva_2017.png">
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/modern-business.css" rel="stylesheet">
+
+  <!-- sweetalert2 -->
+  <link rel="stylesheet" href="vendor/sweetalert2/sweetalert2.min.css">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Luis Iraheta - IM15005</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:void(0);">Home</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <!-- Slide One - Set the background image for this slide in the line below -->
+        <div class="carousel-item active" style="background-color: #cccccc;">
+          <div class="header-ues">
+            <div class="text-center">
+              <img src="./vendor/img/Minerva_2017.png" width="10%" class="img-fluid" alt="">
+              <h1>UNIVERSIDAD DE EL SALVADOR <br> FACULTAD MULDISICIPLINARIA ORIENTAL <br> DEP. INGENIERIA Y ARQUITECTURA
+              </h1>
+              <hr class="hr-ues">
+              <h2>INGENIERIA DE SOFTWARE</h2>
+              <br>
+              <div class="row">
+                <div class="col-md-6 col-xs-6">
+                  <h5>
+                    <b>Docente:</b> Ing. Milagro Alicia de Reyes <br>
+                    <b>Tutor:</b> <a href="https://github.com/Ral1996" class="text-danger">Br. Raul Portillo</a> <br>
+                  </h5>
+                </div>
+                <div class="col-md-6 col-xs-6">
+                  <h5>
+                    <b>Práctica:</b> Builder Pattern <br>
+                    <b>Presenta:</b> <a href="https://github.com/liluisjose1" class="text-danger">Br. Luis José Iraheta Medrano
+                      IM15005 </a> <br>
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-caption d-none d-md-block">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <h1 class="my-4">Welcome to Modern Business</h1>
+
+    <!-- Marketing Icons Section -->
+    <div class="row">
+      <div class="col-lg-4 col-md-4 mb-4">
+        <div class="card h-100">
+          <h4 class="card-header text-center ">IphoneX</h4>
+          <div class="card-body">
+            <div class="card-center">
+              <center><img src="./vendor/img/iphonex.png" class="img-fluid" width="50%" alt=""></center>
+            </div>
+          </div>
+          <div class="card-footer">
+            <center><a href="#" onclick="runIphone(); return false" class="btn btn-danger">Learn More</a></center>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 mb-4">
+        <div class="card h-100">
+          <h4 class="card-header text-center ">Samsung Galaxy S9</h4>
+          <div class="card-body">
+            <div class="card-center">
+              <center><img src="./vendor/img/samsungS9.png" class="img-fluid" height="100%" alt=""></center>
+            </div>
+          </div>
+          <div class="card-footer">
+            <center><a href="#" onclick="runSamsung(); return false" class="btn btn-danger">Learn More</a></center>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 mb-4">
+        <div class="card h-100">
+          <h4 class="card-header text-center ">Huawei P20 Pro</h4>
+          <div class="card-body">
+            <div class="card-center">
+              <center><img src="./vendor/img/huawei-p20.jpg" class="img-fluid" height="100%" alt=""></center>
+            </div>
+          </div>
+          <div class="card-footer">
+            <center><a onclick="runHuawei(); return false" href="#" class="btn btn-danger">Learn More</a></center>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- Features Section -->
+    <div id="product_info">
+      <div class="row">
+        <div class="col-lg-6">
+          <h2>Product Info</h2>
+          <p>High-end product information:</p>
+          <ul>
+            <li>
+              <strong>Sistema operativo: <span id="os"></span> </strong>
+            </li>
+            <li>Memoria: <span id="memory"></span> </li>
+            <li>RAM: <span id="ram"></span></li>
+            <li>RAM: <span id="procesador"></span></li>
+          </ul>
+          <p id="parrafo" class="text-justify"></p>
+        </div>
+        <div class="col-lg-6">
+          <div id="resultado_img"></div>
+        </div>
+      </div>
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white"> <span id="anio" ></span> Copyright &copy; <a class="text-danger" href="https://github.com/liluisjose1/">liluisjose1</a></p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/builder.js"></script>
+  <script src="./vendor/sweetalert2/sweetalert2.min.js"></script>
+  <script src="./vendor/sweetalert2/sweetalert2.common.js"></script>
+
+  <!-- Date -->
+  <script type="text/javascript">
+    var date = new Date();
+    document.getElementById("anio").innerHTML = date.getFullYear();
+    document.getElementById("product_info").hidden = true;
+  </script>
+
+</body>
+
+</html>
